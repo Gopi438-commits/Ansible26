@@ -1,6 +1,5 @@
 - name: install packages
-  hosts: local
-  connection: local
+  hosts: all
   become: yes
   vars:
     packages:
