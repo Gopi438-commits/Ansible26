@@ -5,7 +5,7 @@
     packages:
       - nginx
       - mysql
-      - mongodb-org
+      - redis
 
   tasks:
     - name: install software
