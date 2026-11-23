@@ -1,0 +1,20 @@
+- name: install packages
+  hosts: local
+  connection: local
+  become: yes
+  vars:
+    packages:
+      - nginx
+      - mysql
+      - mongodb
+
+  tasks:
+    - name: install software
+      ansible.builtin.dnf:
+        name: "{{ item }}" 
+        state: present
+      loop: "{{ packages }}"  
+       
+       
+
+  
